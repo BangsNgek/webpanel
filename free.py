@@ -407,3 +407,5 @@ GET / HTTP/1.1[crlf]Host: {serverv}[crlf]Connection: Upgrade[crlf][crlf]</strong
 						flash(Markup("Username Already Exist"))
 						return render_template(templates["sshtrial"],nama=username,tipe="Member",serverz=server)
 
+if __name__ == "__main__":
+	app.run()
