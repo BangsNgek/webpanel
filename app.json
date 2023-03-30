@@ -4,15 +4,15 @@
   "stack": "container",
   "env": {
     "ADMIN_USERNAME": {
-      "description": "Admin Username (untuk mengelola atau menghapus member di Panel)",
+      "description": "root",
       "required": true
     },
     "ADMIN_PASSWORD": {
-      "description": "Admin Password",
+      "description": "Heehetapwurng12345@@",
       "required": true
     },
      "AUTH_KEY": {
-      "description": "AUTH Key untuk API VPS",
+      "description": "Heehetapwurng12345@@",
       "required": true
     },
     "DARK_MODE": {
