@@ -26,7 +26,7 @@ db.execute(f"CREATE TABLE IF NOT EXISTS admin (username varchar DEFAULT '{ADMIN_
 db.execute("INSERT INTO admin (username,password) VALUES (%s,%s);", (ADMIN_USERNAME,ADMIN_PASSWORD))
 token = BOT_TOKEN
 app = Flask(__name__)
-app.secret_key = "XolPanel"
+app.secret_key = "BangsNgek Panel"
 requests = requests.Session()
 requests.headers.update({"AUTH_KEY":AUTH_KEY})
 if DARK_MODE.lower() == "yes":
@@ -307,7 +307,7 @@ def sshBuat():
 						exp = exp.strftime("%Y-%m-%d")
 						expd = "{:%B %d, %Y}".format(datetime.datetime.strptime(str(exp),"%Y-%m-%d"))
 						db.execute("INSERT INTO transaksi (username,tanggal,akun,harga,status) VALUES (%s,%s,%s,%s,%s)", (username, expd, "Akun SSH", salkur, "Sukses") )
-						flash(Markup(f"""<strong>Premium SSH Account<br>
+						flash(Markup(f"""<strong>====[ Bangs Ngek VPN ]====<br>
 —<br>
 Hostname: {serverv[0]}<br>
 Username: {user}<br>
@@ -322,7 +322,8 @@ OpenSSH: 22<br>
 SSL/TLS: 443, 777<br>
 —<br>
 Websocket Payload:<br>
-GET / HTTP/1.1[crlf]Host: {serverv}[crlf]Connection: Upgrade[crlf][crlf]</strong>"""))
+GET / HTTP/1.1[crlf]Host: {serverv}[crlf]Connection: Upgrade[crlf][crlf]<br>
+====[ Bangs Ngek VPN ]====</strong>"""))
 						return render_template(templates["sshbuat"],nama=username,tipe="Member",serverz=server)
 					else:
 						flash(Markup("Username Already Exist"))
