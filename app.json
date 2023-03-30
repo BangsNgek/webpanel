@@ -1,6 +1,6 @@
 {
-  "name": "XolPanel - Web VPN Panel",
-  "description": "XolPanel - Free Web VPN Panel With WSGI Flask WebServer",
+  "name": "BangsNgek Panel - Web VPN SSH Panel",
+  "description": "BangsNgek Panel - Free Web VPN SSH Panel With WSGI Flask WebServer",
   "stack": "container",
   "env": {
     "ADMIN_USERNAME": {
