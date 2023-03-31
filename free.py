@@ -20,9 +20,9 @@ for z in SERVER:
 
 db = create_engine(DATABASE_URL, pool_pre_ping=True)
 db.begin()
-db.execute("CREATE TABLE IF NOT EXISTS userz (saldo varchar DEFAULT 0, email varchar, password varchar, username varchar)")
-db.execute("CREATE TABLE IF NOT EXISTS transaksi (username varchar, tanggal varchar, akun varchar, harga varchar, status varchar)")
-db.execute(f"CREATE TABLE IF NOT EXISTS admin (username varchar DEFAULT '{ADMIN_USERNAME}', password varchar DEFAULT '{ADMIN_PASSWORD}')")
+db.execute("CREATE TABLE userz (saldo varchar DEFAULT 0, email varchar, password varchar, username varchar)")
+db.execute("CREATE TABLE transaksi (username varchar, tanggal varchar, akun varchar, harga varchar, status varchar)")
+db.execute(f"CREATE TABLE admin (username varchar DEFAULT '{ADMIN_USERNAME}', password varchar DEFAULT '{ADMIN_PASSWORD}')")
 db.execute("INSERT INTO admin (username,password) VALUES (%s,%s);", (ADMIN_USERNAME,ADMIN_PASSWORD))
 token = BOT_TOKEN
 app = Flask(__name__)
